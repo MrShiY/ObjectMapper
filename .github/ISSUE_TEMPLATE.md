@@ -14,7 +14,11 @@ struct Repo: Mappable {
   var name: String!
   var url: URL!
 
-  init(_ map: Map) {
+  init?(map: Map) {
+
+  }
+
+  mutating func mapping(map: Map) {
     name <- map["name"]
     url <- map["url"]
   }
